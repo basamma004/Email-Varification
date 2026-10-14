@@ -1,0 +1,101 @@
+# Spring Boot Email Verification
+
+## Overview
+
+This is a simple Spring Boot application that demonstrates email verification.
+
+The application sends a verification email to the user's email address. The user can then use the verification code or verification link to verify their email.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Spring Mail
+- Spring MVC
+- HTML
+- Maven
+
+## Features
+
+- Send email using Spring Boot
+- Generate a verification code
+- Send the verification code to the user's email
+- Verify the email using the received code
+- Simple email verification flow
+
+## Project Structure
+
+```text
+src
+└── main
+    ├── java
+    │   └── com.example.project
+    │       ├── Sender.java
+    │       └── Verification.java
+    │
+    └── resources
+        └── application.properties
+```
+
+## Classes
+
+### Sender
+
+The `Sender` class is responsible for sending the email to the user.
+
+It contains the logic required to connect with the mail server and send the verification email.
+
+### Verification
+
+The `Verification` class is responsible for verifying the code received by the user.
+
+The user enters the verification code, and the application checks whether it is valid.
+
+## Email Verification Flow
+
+```text
+User enters email
+       ↓
+Verification code is generated
+       ↓
+Sender sends email
+       ↓
+User receives verification code
+       ↓
+User enters verification code
+       ↓
+Verification class checks the code
+       ↓
+Email Verified
+```
+
+## Configuration
+
+Email configuration is added in `application.properties`.
+
+Example:
+
+```properties
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your_email@gmail.com
+spring.mail.password=your_app_password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+```
+
+Do not upload your actual email password or App Password to GitHub.
+
+## How to Run
+
+1. Clone the repository.
+2. Open the project in Eclipse, IntelliJ IDEA, or VS Code.
+3. Configure the email settings in `application.properties`.
+4. Run the Spring Boot application.
+5. Enter an email address.
+6. Check the email for the verification code.
+7. Enter the code to complete verification.
+
+## Purpose
+
+This project was created to understand email sending and email verification using Spring Boot and Spring Mail.
